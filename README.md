@@ -58,35 +58,58 @@ Create an app, where user will be able to sign in/sign up. Once account created 
 
 #### Component Tree
 
-[Component Tree](https://i.imgur.com/JpBUg61.png)
+![Component Tree](https://i.imgur.com/JpBUg61.png)
 
 #### Component Architecture
 
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ screens/
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ Blends.jsx
+      |__ Spices.jsx
+      |__ SpiceDetail.jsx
+      |__ BlendEdit.jsx
+      |__ BlendCreate.js
+      |__ Home.jsx
 |__ services/
-
+      |__ auth.js
+      |__ config.jsx
+      |__ blends.js
+      |__ spices.jsx
+|__ App.css/
+|__ App.js/
+|__ Index.css/
+|__ Index.js/
 ```
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+| Component                                                | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Pseudocode                                               |    H     |    0.5hrs      |               |             |
+| Install Ruby on Rails / seed PostgreSQL database         |    H     |    4.5hrs      |               |             |
+| Set up models/controllers/routes in Rails                |    H     |      3hrs      |               |             |
+| Create React App / Create separate components            |    H     |      2hrs      |               |             |
+| Clickable Edit / Add buttons / React Routes              |    H     |      2hrs      |               |             |
+| CRUD functionality on front-end                          |    H     |      4hrs      |               |             |
+| Setup CORS                                               |    H     |    0.5hrs      |               |             |
+| CRUD functionality on back-end                           |    H     |      4hrs      |               |             |
+| CSS styling desktop                                      |    H     |      5hrs      |               |             |
+| CSS Grid / Bootstrap styling                             |    H     |      4hrs      |               |             |
+| Deploy back-end to Heroku / front-end to Netlify         |    H     |    1.5hrs      |               |             |
+| Media Query for Mobile                                   |    H     |      3hrs      |               |             |
+| Media Query for Tablet                                   |    H     |      3hrs      |               |             |
+| MVP check/fixes/tweaks                                   |    H     |      3hrs      |               |             |
+| PostMVP checks/fixes/tweaks                              |    H     |      2hrs      |               |             |
+| Total                                                    |    H     |     42hrs      |               |             |
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -94,16 +117,15 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+![ERD](https://i.imgur.com/jhR0RaS.png)
 <br>
 
 ***
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Add Sort/Search functionality
+- Add recipe suggestions for spices/blends
 
 ***
 
