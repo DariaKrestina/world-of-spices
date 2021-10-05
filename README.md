@@ -53,7 +53,7 @@ Create an app, where user will be able to sign in/sign up. Once account created 
 
 ### Client (Front End)
 
-#### Wireframes
+#### [Wireframes](https://www.figma.com/file/twSXmrDwSBn9RzNAFB7bIv/world-of-spices?node-id=0%3A1)
 ![Wireframes](https://i.imgur.com/JyprJvs.png)
 
 #### Component Tree
