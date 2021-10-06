@@ -1,5 +1,7 @@
 class BlendsController < ApplicationController
-  before_action :set_blend, only: [:show, :update, :destroy]
+  before_action :set_blend, only: %i[show update destroy]
+  before_action :authorize_request, only: %i[create update destroy]
+  before_action :authorize
 
   # GET /blends
   def index
@@ -10,15 +12,16 @@ class BlendsController < ApplicationController
 
   # GET /blends/1
   def show
-    render json: @blend
+    render json: @blend, include: :spices
   end
 
   # POST /blends
   def create
     @blend = Blend.new(blend_params)
+    @blend.user = @current_user
 
     if @blend.save
-      render json: @blend, status: :created, location: @blend
+      render json: @blend, status: :created
     else
       render json: @blend.errors, status: :unprocessable_entity
     end
@@ -27,7 +30,7 @@ class BlendsController < ApplicationController
   # PATCH/PUT /blends/1
   def update
     if @blend.update(blend_params)
-      render json: @blend
+      render json: @blend, include: :spices
     else
       render json: @blend.errors, status: :unprocessable_entity
     end
@@ -39,13 +42,19 @@ class BlendsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blend
-      @blend = Blend.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def blend_params
-      params.require(:blend).permit(:name, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blend
+    @blend = Blend.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def blend_params
+    params.require(:blend).permit(:name)
+  end
+
+  def authorize
+    @authorized_user = @blend.user == @current_user
+    render json: 'You unauthorized for this action', status: :unauthorized unless @authorized_user
+  end
 end
