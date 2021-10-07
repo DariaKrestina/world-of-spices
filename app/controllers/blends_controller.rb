@@ -1,13 +1,13 @@
 class BlendsController < ApplicationController
   before_action :set_blend, only: %i[show update destroy]
   before_action :authorize_request, only: %i[create update destroy]
-  before_action :authorize
+  before_action :authorize, except: %i[index show create]
 
   # GET /blends
   def index
-    @blends = Blend.all
+    @blends = Blend.where(user: @current_user)
 
-    render json: @blends
+    render json: @blends, include: :spices
   end
 
   # GET /blends/1
@@ -21,7 +21,7 @@ class BlendsController < ApplicationController
     @blend.user = @current_user
 
     if @blend.save
-      render json: @blend, status: :created
+      render json: @blend, include: :spices, status: :created
     else
       render json: @blend.errors, status: :unprocessable_entity
     end
@@ -41,6 +41,15 @@ class BlendsController < ApplicationController
     @blend.destroy
   end
 
+  def add_spice_to_blend
+    @blend = Blend.find(params[:id])
+    @spice = Spice.find(params[:spice_id])
+
+    @blend.spices << @spice
+
+    render json: @blend, include: :spices
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -54,7 +63,7 @@ class BlendsController < ApplicationController
   end
 
   def authorize
-    @authorized_user = @blend.user == @current_user
-    render json: 'You unauthorized for this action', status: :unauthorized unless @authorized_user
+    # @authorized_user =
+    render json: 'You unauthorized for this action', status: :unauthorized unless @blend.user == @current_user
   end
 end

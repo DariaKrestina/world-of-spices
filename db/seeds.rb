@@ -7,7 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # Description for some of the spices were taken from https://www.unlockfood.ca/en/Articles/Cooking-Food-Preparation/How-to-cook-with-Spices.aspx, https://www.worldspice.com/spices
 
-spices = [
+Blend.destroy_all
+Spice.destroy_all
+User.destroy_all
+
+@admin = User.create(username: 'Chickadee', email: 'chickadee@gmail.com', password: '111111')
+
+puts "#{User.count} user created"
+
+Spice.create([
   {
     name: 'Allspice',
     description: 'Allspice tastes like a combination of cinnamon, nutmeg and cloves, which is why it is named “allspice”. This spice is used in both savoury and sweet cooking. It adds a distinct flavour to baked goods like spiced cakes or pumpkin desserts. It’s also used in pickling and is the main ingredient of jerk seasoning. While allspice is used in North American baking, it is more common to South American and Jamaican cooking.',
@@ -104,4 +112,13 @@ spices = [
     flavor: 'Nutty Earthy Warm',
     img_URL: 'https://i.imgur.com/ei5mPCu.jpg'
   }
-]
+])
+
+@spices = Spice.all
+
+puts "#{Spice.count} spices created"
+
+
+Blend.create(name: 'New', user: @admin, spices: @spices[0, 3])
+
+puts "#{Blend.count} blends created"
