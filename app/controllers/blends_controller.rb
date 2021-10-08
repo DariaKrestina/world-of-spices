@@ -1,7 +1,7 @@
 class BlendsController < ApplicationController
   before_action :set_blend, only: %i[show update destroy]
-  before_action :authorize_request, only: %i[create update destroy]
-  before_action :authorize, except: %i[index show create]
+  before_action :authorize_request
+  before_action :authorize, except: %i[index create]
 
   # GET /blends
   def index
@@ -63,7 +63,6 @@ class BlendsController < ApplicationController
   end
 
   def authorize
-    # @authorized_user =
     render json: 'You unauthorized for this action', status: :unauthorized unless @blend.user == @current_user
   end
 end
