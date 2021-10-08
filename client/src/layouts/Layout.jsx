@@ -11,7 +11,7 @@ export default function Layout(props) {
               <p>Hello, {props.currentUser.username}</p>
               <Link to='/blends'>My blends</Link>
               <Link to='/spices'>All spices</Link>
-              <button onClink={props.handleLogout}>Logout</button>
+              <button onClick={props.handleLogout}>Logout</button>
             </div>
           ) : (
             <div>

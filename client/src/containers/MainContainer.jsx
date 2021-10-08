@@ -3,6 +3,7 @@ import { getAllBlends } from "../services/blends"
 import { getAllSpices } from "../services/spices"
 import { Route, Switch } from "react-router-dom"
 import Spices from "../screens/Spices"
+import Blends from "../screens/Blends"
 
 export default function MainContainer() {
   const [blends, setBlends] = useState([])
@@ -29,6 +30,9 @@ export default function MainContainer() {
       <Switch>
         <Route path='/spices'>
           <Spices spices={ spices }/>
+        </Route>
+        <Route path='/blends'>
+          <Blends blends={ blends }/>
         </Route>
       </Switch>
     </div>
