@@ -72,7 +72,7 @@ export default function MainContainer() {
           <BlendEdit blends={ blends } handleBlendEdit={handleBlendEdit} handleBlendDelete={ handleBlendDelete }/>
         </Route>
         <Route path='/blends/new'>
-          <BlendCreate handleBlendCreate={handleBlendCreate} />
+          <BlendCreate spices={ spices } handleBlendCreate={handleBlendCreate} />
         </Route>
         <Route path='/blends'>
           <Blends blends={ blends } handleBlendDelete={ handleBlendDelete }/>

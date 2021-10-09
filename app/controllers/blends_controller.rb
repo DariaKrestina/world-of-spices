@@ -17,10 +17,12 @@ class BlendsController < ApplicationController
 
   # POST /blends
   def create
-    @blend = Blend.new(blend_params)
+    @blend = Blend.new(blend_params.except(:spices))
     @blend.user = @current_user
 
     if @blend.save
+      @spices = Spice.find(blend_params[:spices].map {|s| s[:id]})
+      @blend.spices = @spices
       render json: @blend, include: :spices, status: :created
     else
       render json: @blend.errors, status: :unprocessable_entity
@@ -59,7 +61,7 @@ class BlendsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blend_params
-    params.require(:blend).permit(:name)
+    params.require(:blend).permit(:name, spices: [:id, :description, :name, :img_URL, :created_at, :updated_at, :flavor])
   end
 
   def authorize
