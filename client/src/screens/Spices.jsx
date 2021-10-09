@@ -7,7 +7,7 @@ export default function Spices(props) {
       {props.spices.map(spice => (
         <div key={`spice${spice.id}`}>
           <Link to={`/spices/${spice.id}`}>
-            <img alt="tourist attraction pic" src={spice.img_URL} width="100%"/>
+            <img alt="spice" src={spice.img_URL} width="100%"/>
             <p>{spice.name}</p>
           </Link>
         </div>

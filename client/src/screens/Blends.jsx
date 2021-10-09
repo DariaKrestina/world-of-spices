@@ -8,6 +8,7 @@ export default function Blends(props) {
       {props.blends.map(blend => (
         <div key={`blend${blend.id}`}>
           <p>{blend.name}</p>
+          <p>{blend.spices.map(spice => <p>{spice.name}</p>)}</p>
           <Link to={`/blends/${blend.id}/edit`}><button>Update</button></Link>
           <button onClick={()=>props.handleBlendDelete(blend.id)}>Delete</button>
         </div>
