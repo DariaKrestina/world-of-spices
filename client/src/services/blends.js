@@ -19,8 +19,3 @@ export const putBlend = async (id, blendData) => {
   const resp = await api.put(`/blends/${id}`, { blend: blendData })
   return resp.data
 }
-
-export const addSpiceToBlend = async (spiceId, id) => {
-  const resp = await api.put(`/spices/${spiceId}/blends/${id}`);
-  return resp.data;
-};

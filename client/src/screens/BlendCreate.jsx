@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { addSpiceToBlend } from "../services/blends";
 
 export default function BlendCreate(props) {
-  const [selectedSpice, setSelectedSpice] = useState("");
   const { spices } = props;
   const [formData, setFormData] = useState({
     name: "",
@@ -39,15 +37,6 @@ export default function BlendCreate(props) {
       }),
     }));
   };
-  // const handleChange = (e) => {
-  //   const { value } = e.target;
-  //   setSelectedSpice(value);
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const newSpice = await addSpiceToBlend(selectedSpice, id);
-  // };
 
   return (
     <form
