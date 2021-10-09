@@ -1,18 +1,18 @@
-import React from 'react'
 import { Link } from "react-router-dom"
+
 
 export default function Spices(props) {
   return (
     <div>
       {props.spices.map(spice => (
-        <>
+        <div key={`spice${spice.id}`}>
           <Link to={`/spices/${spice.id}`}>
-            <img key={`spice${spice.id}`} alt="tourist attraction pic" src={spice.img_URL} width="100%"/>
-            <p key={`spice${spice.id}`}>{spice.name}</p>
+            <img alt="tourist attraction pic" src={spice.img_URL} width="100%"/>
+            <p>{spice.name}</p>
           </Link>
-        </>
+        </div>
       ))}
-      <button><Link to='/create'>Create New Blend</Link></button>
+      <button><Link to='/blends/new'>Create new blend</Link></button>
     </div>
   )
 }
