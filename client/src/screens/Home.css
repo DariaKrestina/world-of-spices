@@ -1,0 +1,38 @@
+.home {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.home-h2 {
+  text-align: center;
+  margin-top: 2vw;
+  font-weight: 600;
+}
+
+.carousel {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5vw;
+  margin-top: 3vw;
+}
+
+.home-join-now {
+  position: absolute;
+  top: 40vw;
+  left: 58vw;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 0.9px;
+  text-align: right;
+  width: 400px;
+}
+
+.home-button {
+  margin: 0;
+  border-radius: 22px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 23px;
+  border: none;
+  padding: 0.3vw 4vw;
+}
