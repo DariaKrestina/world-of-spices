@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom"
+import './Spices.css'
 
 
 export default function Spices(props) {
   return (
-    <div>
+    <main>
       {props.spices.map(spice => (
-        <div key={`spice${spice.id}`}>
-          <Link to={`/spices/${spice.id}`}>
+        <div className="spices-single-spice" key={`spice${spice.id}`}>
+          <Link className="spices-description-link" to={`/spices/${spice.id}`}>
             <div>
-            <img alt="spice" src={spice.img_URL} width="100%"/>
+            <img className="spices-img" alt="spice" src={spice.img_URL} width="100%"/>
             <p>{spice.name}</p>
             </div>
           </Link>
         </div>
       ))}
-      <button><Link to='/blends/new'>Create new blend</Link></button>
-    </div>
+      <button className="spices-button"><Link to='/blends/new'>Create new blend</Link></button>
+    </main>
   )
 }

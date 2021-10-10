@@ -1,0 +1,52 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 3vw;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.spices-img {
+  width: 250px;
+  height: 150px;
+}
+
+.spices-description-link {
+  text-decoration: none;
+  color: black;
+}
+
+.spices-description-link:visited {
+  color: black;
+}
+
+.spices-description-link:hover {
+  color: grey;
+}
+
+.spices-button {
+  margin: 2vw;
+  border-radius: 22px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 21px;
+  border: none;
+  padding: 0.3vw 4vw;
+  letter-spacing: 0.8px;
+}
+
+.spices-button a {
+  text-decoration: none;
+}
+
+.spices-button a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.spices-single-spice:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
