@@ -1,0 +1,43 @@
+.blends {
+  background: url("https://i.imgur.com/4H1Nzxc.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 78vh;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+
+.blends button {
+  margin: 0 2vw;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19px;
+  border: none;
+  padding: 0.5vw;
+  color: black;
+}
+
+.blends h1 {
+  color: white;
+  margin-left: 6vw;
+  margin-bottom: 4.5vw;
+}
+
+.blends-single-blend {
+  margin-left: 3vw;
+  margin-bottom: 1.5vw;
+  display: flex;
+}
+
+.blends .blends-add-button {
+  margin: 3vw 3vw;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19px;
+  border: none;
+  padding: 0.5vw 2.5vw;
+  color: black;
+}
