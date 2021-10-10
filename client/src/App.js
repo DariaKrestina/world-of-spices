@@ -1,6 +1,7 @@
 import './App.css';
 import Layout from './layouts/Layout'
 import Login from './screens/Login'
+import Home from './screens/Home'
 import Register from './screens/Register'
 import MainContainer from './containers/MainContainer'
 import { Switch, Route, useHistory } from 'react-router-dom'
@@ -49,9 +50,7 @@ function App() {
             <Login handleLogin={ handleLogin }/>
           </Route>
           <Route path='/'>
-            {currentUser && 
-            <MainContainer />
-            }
+            {currentUser ? <MainContainer /> : <Home />}
           </Route>
         </Switch>
       </Layout>

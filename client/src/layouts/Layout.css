@@ -1,0 +1,96 @@
+header, footer {
+  background-color: rgb(11, 11, 11);
+  color: white;
+  letter-spacing: 0.6px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer {
+  display: flex;
+}
+
+.header-text a:visited {
+  text-decoration: none;
+}
+
+.header-text a:hover {
+  color: grey;
+}
+
+.header-text a{
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 #000000);
+  filter: opacity(0.5) drop-shadow(0 0 0 #000000);
+}
+
+.logo:hover {
+  -webkit-filter: opacity(0.4) drop-shadow(0 0 0 #000000);
+  filter: opacity(0.4) drop-shadow(0 0 0 #000000);
+}
+
+.logo-and-text {
+  display: flex;
+  margin: 1% 3% 0 0
+}
+
+.authorized {
+  display: flex;
+}
+
+.header-text {
+  margin-right: 2vw;
+}
+
+.welcome-message {
+  margin: 0 5vw
+}
+
+.header-link {
+  margin-right: 1.5vw
+}
+
+.header-button {
+  background: none;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+  color: white;
+  display: inline;
+  margin-bottom: 7vw;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+}
+
+.header-button:hover {
+  color: grey;
+}
+
+.footer-images img {
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 #ffffff);
+  filter: opacity(0.5) drop-shadow(0 0 0 #ffffff);
+  margin-top: 0.4vw;
+  margin-right: 0.2vw;
+}
+
+.footer-images img:hover {
+  -webkit-filter: opacity(0.7) drop-shadow(0 0 0 #ffffff);
+  filter: opacity(0.7) drop-shadow(0 0 0 #ffffff);
+}
+
+.linkedin-image {
+  margin-left: 0.4vw;
+}
+footer p {
+  margin: 0.8vw 0.8vw 0;
+}

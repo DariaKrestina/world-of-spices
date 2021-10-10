@@ -17,7 +17,7 @@ export default function BlendCreate(props) {
         id: "",
         name: "",
       },
-    ],
+    ]
   });
 
   const handleChange = (e) => {
