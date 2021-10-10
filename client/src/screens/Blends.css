@@ -20,18 +20,18 @@
 
 .blends h1 {
   color: white;
-  margin-left: 6vw;
+  margin-left: 7vw;
   margin-bottom: 4.5vw;
 }
 
 .blends-single-blend {
-  margin-left: 3vw;
+  margin-left: 4.5vw;
   margin-bottom: 1.5vw;
   display: flex;
 }
 
 .blends .blends-add-button {
-  margin: 3vw 3vw;
+  margin: 3vw 5vw;
   border-radius: 25px;
   text-align: center;
   cursor: pointer;

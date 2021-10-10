@@ -30,13 +30,13 @@ export default function Layout(props) {
         <p>&copy; {new Date().getFullYear()} by Daria Krestina</p>
         <div className="footer-images">
           <a href="mailto:dykrestina@gmail.com">
-              <img src="https://i.imgur.com/dku2zgp.png" alt="email icon" width="45px"/>
+              <img src="https://i.imgur.com/dku2zgp.png" alt="email icon" width="35px"/>
           </a>
           <a href="https://www.linkedin.com/in/daria-krestina/" target="_blank" rel="noreferrer">
-              <img className="linkedin-image" src="https://i.imgur.com/Z7y5ob9.png" alt="Linkein logo" width="45px"/>
+              <img className="linkedin-image" src="https://i.imgur.com/Z7y5ob9.png" alt="Linkein logo" width="35px"/>
           </a>
           <a href="https://github.com/DariaKrestina" target="_blank" rel="noreferrer">
-              <img src="https://i.imgur.com/iavAlwB.png" alt="Github logo" width="45px"/>
+              <img src="https://i.imgur.com/iavAlwB.png" alt="Github logo" width="35px"/>
           </a>
         </div>
       </footer>

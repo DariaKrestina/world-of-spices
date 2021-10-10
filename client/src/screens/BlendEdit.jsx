@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import './BlendEdit.css'
 
 export default function BlendEdit(props) {
   const { spices } = props;
@@ -55,7 +56,7 @@ export default function BlendEdit(props) {
   };
 
   return (
-    <form
+    <form className="blend-edit"
       onSubmit={(e) => {
         e.preventDefault();
         props.handleBlendEdit(id, formData);
@@ -72,7 +73,7 @@ export default function BlendEdit(props) {
         />
       </label>
       {formData.spices.map((_spiceInput, index) => (
-        <div key={`select${index}`}>
+        <div className="blend-edit-single-dropdown" key={`select${index}`}>
           <select
             onChange={(e) => handleSelectChange(e, index)}
             defaultValue={formData.spices.map((spice) => spice.name)}
@@ -84,16 +85,16 @@ export default function BlendEdit(props) {
               <option key={`${index}${spice.id}`} value={spice.id}>{spice.name}</option>
             ))}
           </select>
-          <button onClick={(e) => {
+          <button className="blend-edit-delete" onClick={(e) => {
             e.preventDefault();
             setFormData((prevState) => ({
               ...prevState,
               spices: prevState.spices.filter((_s, i) => i !== index)
             }))
-          }}>Delete</button>
+          }}><img src="https://i.imgur.com/lFrq8MB.png" alt="delete" width="40px" /></button>
         </div>
       ))}
-      <button
+      <button className="blend-edit-add"
         onClick={(e) => {
           e.preventDefault();
           setFormData((prevState) => ({
@@ -108,11 +109,11 @@ export default function BlendEdit(props) {
           }));
         }}
       >
-        Add
+        <img src="https://i.imgur.com/uKjzGW7.png" alt="add" width="40px" />
       </button>
       <br />
-      <button>Save</button>
-      <button onClick={() => props.handleBlendDelete(id)}>Delete</button>
+      <button className="blend-edit-save">Save</button>
+      <button className="blend-edit-save" onClick={() => props.handleBlendDelete(id)}>Delete</button>
     </form>
   );
 }

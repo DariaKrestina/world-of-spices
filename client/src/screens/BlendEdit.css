@@ -1,0 +1,73 @@
+.blend-edit {
+  background: url("https://i.imgur.com/4H1Nzxc.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 78vh;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+  padding-left: 5vw;
+}
+
+.blend-edit-delete,
+.blend-edit-add {
+  margin: 0 2vw;
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19px;
+  border: none;
+  padding: 0.5vw;
+  color: black;
+}
+
+.blend-edit-save {
+    margin-top: 3.5vw;
+    margin-right: 2.5vw;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 19px;
+    border: none;
+    padding: 0.4vw 6vw;
+    color: black;
+}
+
+.blend-edit input {
+  background: black;
+  border: none;
+  width: 400px;
+  border-bottom: solid 1px white;
+  margin-bottom: 1.5vw;
+  font-size: 20px;
+  color: white;
+}
+
+.blend-edit input:focus {
+  outline-color: black;
+}
+
+.blend-edit label {
+  font-size: 30px;
+}
+
+.blend-edit-single-dropdown {
+  margin-bottom: 1vw;
+}
+
+.blend-edit-add {
+  margin-left: 5vw;
+}
+
+.blend-edit select {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  width: 230px;
+}
+
+.blend-edit select:focus,
+.blend-edit select:active,
+.blend-edit select:hover {
+  outline-color: black;
+}
