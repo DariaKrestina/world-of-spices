@@ -1,0 +1,56 @@
+article {
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0.7px;
+  line-height: 27px;
+}
+
+article h1 {
+  text-align: center;
+  font-weight: 600;
+  margin: 2vw 0 2.5vw 0;
+  font-size: 30px;
+}
+
+article img {
+  width: 500px;
+  height: 310px;
+}
+
+article button {
+  margin: 0 2vw 1vw;
+  border-radius: 22px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  font-size: 21px;
+  border: none;
+  padding: 0.3vw 4vw 0.6vw;
+  letter-spacing: 0.8px;
+  color: white;
+}
+
+article h4 {
+  margin-top: 0.35vw;
+}
+
+.detail-button-and-description {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vw;
+  margin-top: 3vw;
+}
+
+.detail-flavor {
+  display: flex;
+}
+
+.detail-img-and-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 2% 4%;
+}
+
+.detail-flavor span {
+  font-weight: 600;
+  margin-right: 2vw;
+}
