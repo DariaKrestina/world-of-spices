@@ -29,7 +29,6 @@ export default function BlendEdit(props) {
       setFormData({
         name: singleBlend.name,
         spices: singleBlend.spices
-          // .map((spice) => spice.name),
       });
     };
     if (props.blends.length) {
@@ -76,13 +75,13 @@ export default function BlendEdit(props) {
         <div className="blend-edit-single-dropdown" key={`select${index}`}>
           <select
             onChange={(e) => handleSelectChange(e, index)}
-            defaultValue={formData.spices.map((spice) => spice.name)}
+            defaultValue={formData.spices[index]}
           >
-            <option disabled value="default">
+            <option disabled>
               -- Select a Spice --
             </option>
             {spices.map((spice) => (
-              <option key={`${index}${spice.id}`} value={spice.id}>{spice.name}</option>
+              <option key={`${index}${spice.id}`} value={spice.id} selected={formData.spices[index].id === spice.id}>{spice.name}</option>
             ))}
           </select>
           <button className="blend-edit-delete" onClick={(e) => {
@@ -113,7 +112,7 @@ export default function BlendEdit(props) {
       </button>
       <br />
       <button className="blend-edit-save">Save</button>
-      <button className="blend-edit-save" onClick={() => props.handleBlendDelete(id)}>Delete</button>
+      <button onClick={() => props.handleBlendDelete(id)}>Delete</button>
     </form>
   );
 }

@@ -31,9 +31,9 @@ class BlendsController < ApplicationController
 
   # PATCH/PUT /blends/1
   def update
-    if @blend.update(blend_params)
-      # @spices = Spice.find(blend_params[:spices].map {|s| s[:id]})
-      # @blend.spices = @spices
+    if @blend.update(name: blend_params[:name])
+      @spices = Spice.find(blend_params[:spices].map {|s| s[:id]})
+      @blend.spices = @spices
       render json: @blend, include: :spices
     else
       render json: @blend.errors, status: :unprocessable_entity
