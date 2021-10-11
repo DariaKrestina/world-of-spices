@@ -73,3 +73,27 @@
 .blend-edit select:hover {
   outline-color: black;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .blend-edit {
+    padding-top: 5vw;
+    min-height: 85vh;
+  }
+
+  .blend-edit input {
+    width: 300px;
+    margin-bottom: 7vw;
+  }
+
+  .blend-edit-save {
+    padding: 2vw 15vw;
+  }
+
+  .blend-edit select {
+    margin-bottom: 3.5vw;
+  }
+
+  .blend-edit-add {
+    margin-left: 25vw;
+  }
+}
