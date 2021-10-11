@@ -90,7 +90,7 @@ export default function BlendEdit(props) {
               ...prevState,
               spices: prevState.spices.filter((_s, i) => i !== index)
             }))
-          }}><img src="https://i.imgur.com/lFrq8MB.png" alt="delete" width="40px" /></button>
+          }}><img src="https://i.imgur.com/lFrq8MB.png" alt="delete" width="30px" /></button>
         </div>
       ))}
       <button className="blend-edit-add"
@@ -108,11 +108,11 @@ export default function BlendEdit(props) {
           }));
         }}
       >
-        <img src="https://i.imgur.com/uKjzGW7.png" alt="add" width="40px" />
+        <img src="https://i.imgur.com/uKjzGW7.png" alt="add" width="30px" />
       </button>
       <br />
       <button className="blend-edit-save">Save</button>
-      <button onClick={() => props.handleBlendDelete(id)}>Delete</button>
+      <button className="blend-edit-save" onClick={() => props.handleBlendDelete(id)}>Delete</button>
     </form>
   );
 }

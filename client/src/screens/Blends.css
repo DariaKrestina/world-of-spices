@@ -14,8 +14,10 @@
   font-weight: 600;
   font-size: 19px;
   border: none;
-  padding: 0.5vw;
+  padding: 0.2vw;
   color: black;
+  background-color: rgb(79, 79, 79);
+  opacity: 0.9;
 }
 
 .blends h1 {
@@ -38,6 +40,8 @@
   font-weight: 600;
   font-size: 19px;
   border: none;
-  padding: 0.5vw 2.5vw;
+  padding: 0.5vw 4vw;
   color: black;
+  background-color: white;
+  opacity: 1;
 }
