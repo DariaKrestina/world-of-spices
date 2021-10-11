@@ -1,4 +1,4 @@
-# World of Spices
+# [World of Spices](https://world-of-spices.surge.sh/)
 
 - [Overview](#overview)
 - [MVP](#mvp)
