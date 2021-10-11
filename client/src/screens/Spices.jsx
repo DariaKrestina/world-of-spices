@@ -4,6 +4,7 @@ import './Spices.css'
 
 export default function Spices(props) {
   return (
+    <>
     <main>
       {props.spices.map(spice => (
         <div className="spices-single-spice" key={`spice${spice.id}`}>
@@ -15,7 +16,8 @@ export default function Spices(props) {
           </Link>
         </div>
       ))}
-      <button className="spices-button"><Link to='/blends/new'>Create new blend</Link></button>
     </main>
+      <button className="spices-button"><Link to='/blends/new'>Create new blend</Link></button>
+    </>
   )
 }
