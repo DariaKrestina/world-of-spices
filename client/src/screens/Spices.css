@@ -57,3 +57,11 @@ main {
     margin-left: 33%;
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .spices-button {
+    margin-left: 17%;
+    padding: 1vw 10vw;
+    width: 250px;
+  }
+}
