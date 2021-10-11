@@ -2,6 +2,7 @@ article {
   font-family: "Titillium Web", sans-serif;
   letter-spacing: 0.7px;
   line-height: 27px;
+  min-height: 80vh;
 }
 
 article h1 {

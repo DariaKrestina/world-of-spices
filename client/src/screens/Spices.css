@@ -40,6 +40,7 @@ main {
 
 .spices-button a {
   text-decoration: none;
+  color: white;
 }
 
 .spices-button a:visited {
