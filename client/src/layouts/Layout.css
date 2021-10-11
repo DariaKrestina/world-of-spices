@@ -94,3 +94,7 @@ footer {
 footer p {
   margin: 1vw 0.8vw 0;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  
+}
