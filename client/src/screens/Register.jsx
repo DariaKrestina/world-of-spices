@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import './Register.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ export default function Register(props) {
   }
 
   return (
-    <div>
+    <div className="register">
       <h1>Create Account</h1>
     <form onSubmit={(e) => {
       e.preventDefault()

@@ -1,0 +1,33 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1px;
+}
+
+.register input {
+  width: 250px;
+}
+
+.register button {
+  margin: 15px 40px ;
+  border-radius: 22px;
+  background-color: black;
+  text-align: center;
+  font-size: 17px;
+  border: none;
+  padding: 3px 50px 5px;
+  letter-spacing: 0.8px;
+  color: white;
+}
+
+.register h1 {
+  font-size: 25px;
+}
+
+.register input:focus {
+  outline-color: grey;
+}
