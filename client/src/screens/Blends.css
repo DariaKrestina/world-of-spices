@@ -45,3 +45,26 @@
   background-color: white;
   opacity: 1;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .blends {
+    min-height: 83vh;
+  }
+
+  .blends h1 {
+    padding-top: 9vw;
+    margin-bottom: 12vw;
+  }
+
+  .blends-single-blend h2 {
+    margin-bottom: 3vw;
+  }
+
+  .blends .blends-add-button {
+    padding: 1.5vw 12vw;
+  }
+
+  .blends-icons button {
+    margin-top: 2vw;
+  }
+}
