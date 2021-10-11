@@ -72,3 +72,28 @@
 .blend-create select:hover {
   outline-color: black;
 }
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .blend-create {
+    padding-top: 5vw;
+    min-height: 85vh;
+  }
+
+  .blend-create input {
+    width: 300px;
+    margin-bottom: 7vw;
+  }
+
+  .blend-create-save {
+    padding: 2vw 20vw;
+  }
+
+  .blend-create select {
+    margin-bottom: 3.5vw;
+  }
+
+  .blend-create-add {
+    margin-left: 25vw;
+  }
+}

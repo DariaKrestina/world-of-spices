@@ -40,6 +40,6 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .login {
-    min-height: 85vh;
+    min-height: 86vh;
   }
 }
