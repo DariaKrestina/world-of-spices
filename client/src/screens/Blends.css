@@ -68,3 +68,19 @@
     margin-top: 2vw;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blends {
+    min-height: 90vh;
+  }
+
+  .blends h1 {
+    padding-top: 9vw;
+    margin-bottom: 7vw;
+  }
+
+  .blends .blends-add-button {
+    padding: 1vw 10vw;
+    font-size: 22px;
+  }
+}
