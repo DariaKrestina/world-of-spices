@@ -97,3 +97,27 @@
     margin-left: 25vw;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blend-create {
+    padding-top: 10vw;
+    min-height: 90vh;
+  }
+
+  .blend-create input {
+    width: 300px;
+    margin-bottom: 7vw;
+  }
+
+  .blend-create-save {
+    padding: 1.5vw 15vw;
+  }
+
+  .blend-create select {
+    margin-bottom: 3vw;
+  }
+
+  .blend-create-add {
+    margin-left: 13vw;
+  }
+}
