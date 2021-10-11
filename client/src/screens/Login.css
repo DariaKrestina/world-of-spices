@@ -33,3 +33,13 @@
   color: black;
   text-decoration: underline;
 }
+
+.login input:focus {
+  outline-color: grey;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .login {
+    min-height: 85vh;
+  }
+}

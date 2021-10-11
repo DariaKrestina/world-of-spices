@@ -31,3 +31,9 @@
 .register input:focus {
   outline-color: grey;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .register {
+    min-height: 85vh;
+  }
+}
