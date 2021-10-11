@@ -37,3 +37,9 @@
     min-height: 86vh;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .register {
+    min-height: 90vh;
+  }
+}
